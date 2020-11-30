@@ -18,5 +18,8 @@ jobs:
           name: npm install
           command: npm install
       - run:
-          name: start server.js           
-          command: node server.js
+          name: background start server.js           
+          command: node server.js &
+      - run:
+          name: check server running           
+          command: curl http://localhost:8090         
