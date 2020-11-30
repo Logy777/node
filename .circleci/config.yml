@@ -16,7 +16,7 @@ jobs:
             ls -la
       - run:
           name: npm install
-            npm install
+          command: npm install
       - run:
           name: start server.js           
-            node server.js
+          command: node server.js
