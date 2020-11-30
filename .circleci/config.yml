@@ -10,9 +10,13 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
       - run:
-          name: Try my commands
+          name: Checking directory & it's content
           command: |
             pwd
             ls -la
+      - run:
+          name: npm install
             npm install
+      - run:
+          name: start server.js           
             node server.js
