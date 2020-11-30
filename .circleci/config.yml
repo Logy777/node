@@ -14,6 +14,7 @@ jobs:
           command: |
             pwd
             ls -la
+            ip a
       - run:
           name: npm install
           command: npm install
