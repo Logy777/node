@@ -15,11 +15,8 @@ jobs:
             pwd
             ls -la
       - run:
-          name: npm install
-          command: npm install
-      - run:
-          name: backgro                                                                                                                             und start server.js           
+          name: start the node server                                                                                                                             und start server.js           
           command: node server.js &
       - run:
-          name: check server running           
-          command: curl http://host.docker.internal:8090         
+          name: check whoami           
+          command: whoami         
