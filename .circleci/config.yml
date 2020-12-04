@@ -18,7 +18,7 @@ jobs:
           name: npm install
           command: npm install
       - run:
-          name: backgro                                                                                                                             und start server.js           
+          name: server node start in background                                                                                                                            und start server.js           
           command: node server.js &
       - run:
           name: check server running           
