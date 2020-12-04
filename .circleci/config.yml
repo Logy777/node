@@ -16,10 +16,5 @@ jobs:
             ls -la
       - run:
           name: start the node server                                                                                                                             und start server.js           
-          command: node server.js &
-      - run:
-          name: check whoami           
-          command: whoami
-      - run:
-          name: check whoami           
-          command: curl http://tut.by         
+          command: docker build .
+       
