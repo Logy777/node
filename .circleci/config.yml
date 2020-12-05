@@ -24,5 +24,5 @@ jobs:
           command: curl http://tut.by
       - run:
           name: check server running           
-          command: curl http://localhost                   
+          command: curl http://127.0.0.1:8090/                   
 
