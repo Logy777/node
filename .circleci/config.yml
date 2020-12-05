@@ -15,12 +15,9 @@ jobs:
             pwd
             ls -la
       - run:
-          name: npm install
-          command: npm install
-      - run:
           name: server node start in background                                                                                                                            und start server.js           
           command: node server.js &
       - run:
           name: check server running           
-          command: curl http://127.0.0.1:8090         
+          command: curl http://tut.by         
 
