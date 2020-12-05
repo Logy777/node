@@ -14,10 +14,15 @@ jobs:
           command: |
             pwd
             ls -la
+            ifconfig
+            whoami
       - run:
           name: server node start in background                                                                                                                            und start server.js           
           command: node server.js &
       - run:
           name: check server running           
-          command: curl http://tut.by         
+          command: curl http://tut.by
+      - run:
+          name: check server running           
+          command: curl http://localhost                   
 
