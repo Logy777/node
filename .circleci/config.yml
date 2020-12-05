@@ -16,9 +16,11 @@ jobs:
             ls -la
             ifconfig
             whoami
+            npm install
       - run:
           name: server node start in background                                                                                                                            und start server.js           
-          command: node server.js &
+          command: node server.js
+          background: true
       - run:
           name: check server running           
           command: curl http://tut.by
