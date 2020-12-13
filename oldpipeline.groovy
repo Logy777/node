@@ -34,7 +34,7 @@ pipeline {
     } 
     stage('Run new docker container') {
       steps{
-        sh "docker run -p 8091:3000 --rm -d --name first_deploy $registry:$BUILD_NUMBER"
+        sh "docker run -p 8091:80 --rm -d --name first_deploy $registry:$BUILD_NUMBER"
       }
     }
    
