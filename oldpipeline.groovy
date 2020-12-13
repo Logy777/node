@@ -27,15 +27,16 @@ pipeline {
     //     }
     //   }
     // }
-    stage('Remove Unused docker image') {
+    stage('Stop old docker container') {
+      steps{
+        sh "docker stop first_deploy"
+      }
+    } 
+    stage('Run new docker container') {
       steps{
         sh "docker run -p 8091:3000 --rm -d --name first_deploy $registry:$BUILD_NUMBER"
       }
     }
-    // stage('Remove Unused docker image') {
-    //   steps{
-    //     sh "docker rmi $registry:$BUILD_NUMBER"
-    //   }
-    // }    
+   
   }
 }
