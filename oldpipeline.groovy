@@ -14,7 +14,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER" , "--network host ."
+          dockerImage = docker.build registry + ":$BUILD_NUMBER" , "--name first_deploy --network host ."
         }
       }
     }
