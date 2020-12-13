@@ -14,7 +14,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER" , "--name first_deploy --network host ."
+          dockerImage = docker.build registry + ":$BUILD_NUMBER" , "--network host ."
         }
       }
     }
@@ -29,7 +29,7 @@ pipeline {
     // }
     stage('Remove Unused docker image') {
       steps{
-        sh "docker run -p 8091:3000 --rm -d $registry:$BUILD_NUMBER"
+        sh "docker run -p 8091:3000 --rm -d --name first_deploy $registry:$BUILD_NUMBER"
       }
     }
     // stage('Remove Unused docker image') {
