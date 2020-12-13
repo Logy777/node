@@ -5,7 +5,7 @@ import connectToDatabase from './helpers.mjs'
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('<h2>Hi there! The deployment works again!</h2>');
+  res.send('<h2>Hi there! The deployment works again! And Now its starting with a webhook.</h2>');
 });
 
 await connectToDatabase();
