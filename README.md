@@ -1,3 +1,3 @@
 # node
-# push generate_
+# push generate
 #
