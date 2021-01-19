@@ -3,7 +3,8 @@ pipeline {
     registry = "logy777/node"
     // registryCredential = 'dockerhub'
   }
-  agent {label 'ruvds'}
+  // agent {label 'ruvds'}
+  agent any
   stages {
     stage('Cloning Git') {
       steps {
